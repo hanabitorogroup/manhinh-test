@@ -1,0 +1,9 @@
+(()=>{"use strict";const stage=document.getElementById("stage"),label=document.getElementById("sceneLabel");const scenes=window.KL_SCENES||[];let i=0,timer=null,playing=true;
+function food(){return '<div class="food-zone"><div class="plate fade d1"></div><div class="garnish enter-up d2"></div><div class="food greens enter-up d2"></div><div class="food rice enter-up d3"></div><div class="food protein enter-right d4"></div></div>'}
+function render(s){stage.innerHTML='<section class="scene active '+(s.className||"")+'"><div class="bg"></div><div class="brand fade">KING LONG</div><div class="kicker enter-up d1">'+s.kicker+'</div><div class="title enter-up d2">'+s.title+'</div><div class="desc enter-up d4">'+s.desc+'</div><div class="price pop d5"><strong>'+s.price+'</strong><span>'+s.currency+'</span></div>'+food()+'<div class="badge pop d5">'+s.badge+'</div></section>';label.textContent=(i+1)+" / "+scenes.length+" · "+s.title}
+function schedule(){clearTimeout(timer);if(playing&&scenes.length)timer=setTimeout(()=>go(i+1),scenes[i].duration)}
+function go(n){i=(n+scenes.length)%scenes.length;render(scenes[i]);schedule()}
+function toggle(){playing=!playing;document.querySelector('[data-action="toggle"]').textContent=playing?"❚❚":"▶";schedule()}
+document.getElementById("controls").addEventListener("click",e=>{const a=e.target.dataset.action;if(a==="next")go(i+1);if(a==="prev")go(i-1);if(a==="toggle")toggle();if(a==="fullscreen"){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen?.()}});
+document.addEventListener("keydown",e=>{if(e.key==="ArrowRight")go(i+1);if(e.key==="ArrowLeft")go(i-1);if(e.key===" ")toggle();if(e.key.toLowerCase()==="f")document.documentElement.requestFullscreen?.()});
+if(scenes.length)go(0);})();
