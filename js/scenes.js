@@ -1,5 +1,8 @@
 window.KL_SCENES=[
-{id:"hero",duration:8000,className:"dark",kicker:"King Long • Polecamy",title:"Kurczak Teriyaki",desc:"Soczysty kurczak, warzywa i aromatyczny ryż. Pełny smak w jednym daniu.",price:"35,00",currency:"zł",badge:"ŚWIEŻO • NA GORĄCO"},
-{id:"combo",duration:8000,className:"combo",kicker:"Nowość",title:"Twój zestaw. Twój smak.",desc:"Wybierz bazę, ulubione mięso i dodatki.",price:"od 29,00",currency:"zł",badge:"ZŁÓŻ SWÓJ ZESTAW"},
-{id:"pho",duration:8000,className:"",kicker:"Wietnamski klasyk",title:"PHỞ",desc:"Aromatyczny bulion, makaron ryżowy, świeże zioła i dodatki.",price:"17,00",currency:"zł",badge:"ROZGRZEWA"}
+{id:"hero",duration:6500,className:"dark fx-cinematic",effect:"cinematic",kicker:"01 • Cinematic zoom",title:"Kurczak Teriyaki",desc:"Powolny zoom produktu + tekst wchodzący warstwami.",price:"35,00",currency:"zł",badge:"CINEMATIC ZOOM"},
+{id:"combo",duration:6500,className:"combo fx-converge",effect:"converge",kicker:"02 • Product converge",title:"Twój zestaw. Twój smak.",desc:"Składniki wpadają z różnych stron i składają się w jeden zestaw.",price:"od 29,00",currency:"zł",badge:"FLY IN • COMBO"},
+{id:"wipe",duration:6500,className:"wipe-scene fx-wipe",effect:"wipe",kicker:"03 • Mask reveal",title:"Chrupiące. Gorące.",desc:"Kolorowa maska odsłania reklamę jak w nowoczesnym digital menu.",price:"32,00",currency:"zł",badge:"WIPE REVEAL"},
+{id:"type",duration:6500,className:"type-scene fx-type",effect:"type",kicker:"04 • Stagger typography",title:"PHỞ",desc:"Aromatyczny bulion • makaron ryżowy • świeże zioła",price:"17,00",currency:"zł",badge:"TEXT STAGGER"},
+{id:"parallax",duration:6500,className:"dark fx-parallax",effect:"parallax",kicker:"05 • Parallax & float",title:"Smak w ruchu",desc:"Warstwy produktu poruszają się niezależnie, tworząc głębię.",price:"29,00",currency:"zł",badge:"PARALLAX"},
+{id:"price",duration:6500,className:"price-scene fx-price",effect:"price",kicker:"06 • Price impact",title:"Lunch Deal",desc:"Produkt wchodzi pierwszy, a cena kończy scenę mocnym uderzeniem.",price:"24,90",currency:"zł",badge:"PRICE POP"}
 ];
